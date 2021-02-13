@@ -1,1 +1,1 @@
-# Classwork for Objective C++ course
+# Classwork for C++ college course
