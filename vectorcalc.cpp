@@ -12,7 +12,8 @@ void vecScalar(double x, double y);
 double xScalar;
 double yScalar;
 
-int main() {
+int main() 
+{
 
 	double mag;
 	double theta;
