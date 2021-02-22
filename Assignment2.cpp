@@ -22,7 +22,7 @@ int main()
 	string str1;
 		
 	cout << " Please enter a word: ";
-	cin >> str1;
+	getline(cin, str1);		
 	// cout << str1;
 	loVow(str1);
 	cout << " lowercase a appeared: " << aCount << endl;
