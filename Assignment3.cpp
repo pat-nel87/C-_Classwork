@@ -2,7 +2,6 @@
 // ASSIGNMENT #: 3
 // DUE: 3/02/21
 
-// working rough draft..
 
 #include <iostream>
 #include <iomanip>
@@ -12,10 +11,21 @@
 
 using namespace std;
 
-void pollResult(string names[], double vtot[]);
+void dataCollect();
+void pollResult(string names[], string win, double vtot[]);
 
-int main() {
+
+int main()
+{
+	
 	system("Color 0A"); // Makes background black & text monochrome green!	
+	
+	dataCollect();
+	
+	return 0;
+}
+
+void dataCollect() {
 	
 	string last_name[5];
 	double votes[5];
@@ -23,28 +33,27 @@ int main() {
 	string winner;
 	
 	for (int i=0; i < 5; i++)
-	{
+{
 		cout << "Enter Candidate " << i + 1 << "'s last name " << " ";
 		getline(cin, last_name[i]);				
-	}
+}
 	for (int j=0; j < 5; j++)
-	{
+{
 		cout << "Enter Candidate " << j + 1 << "'s total votes" << " ";
 		cin >> votes[j];
-		if (max < votes[j]) //finds the winner
-		{
+		if (max < votes[j]) //finds the winner while collecting votes, more effecient?
+	{
 			max = votes[j];
 			winner = last_name[j];
-		}
 	}
+}
 		
-	pollResult(last_name, votes);
-	cout << "\n" << "The Winner of the election is: " << winner << endl;
+	pollResult(last_name, winner, votes);
 	
-	return 0;
 }
 
-void pollResult(string names[], double vtot[])
+
+void pollResult(string names[], string win, double vtot[])
 {
 	
 	double total;
@@ -64,6 +73,6 @@ void pollResult(string names[], double vtot[])
 }
 
  cout << "\n" << "Total Votes: " << total << endl;
-
+ cout << "\n" << "The Winner of the election is: " << win << endl;
 }
 
