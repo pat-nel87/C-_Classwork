@@ -6,7 +6,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include <windows.h> //included to modify default terminal background color!
+#include <windows.h> //included to modify default background & text colors
 
 
 using namespace std;
@@ -17,8 +17,7 @@ void pollResult(string names[], string win, double vtot[]);
 
 int main()
 {
-	
-	system("Color 0A"); // Makes background black & text monochrome green!	
+		
 	
 	dataCollect();
 	
@@ -34,11 +33,13 @@ void dataCollect() {
 	
 	for (int i=0; i < 5; i++)
 {
+		system("Color B5");
 		cout << "Enter Candidate " << i + 1 << "'s last name " << " ";
 		getline(cin, last_name[i]);				
 }
 	for (int j=0; j < 5; j++)
-{
+{		
+		system("Color 16");
 		cout << "Enter Candidate " << j + 1 << "'s total votes" << " ";
 		cin >> votes[j];
 		if (max < votes[j]) //finds the winner while collecting votes, more effecient?
@@ -62,7 +63,7 @@ void pollResult(string names[], string win, double vtot[])
 {
 	total = total + vtot[h];
 }	
-	
+	system("Color E4");
 	cout << "CANDIDATE	" << "Votes Received	" << "Percent of Total Votes" << "\n";
 	for (int k=0; k < 5; k++)
 {
