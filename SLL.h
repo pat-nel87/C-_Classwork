@@ -20,7 +20,6 @@ class node
 		}
 };
 
-
 class headNode
 {
 	private:
@@ -50,6 +49,8 @@ void headNode::setNextNode(int next)
 	cin >> booler;
 	if (booler == 1)
 	{
+		// interested to learn more about "new"
+		// need to also inspect textbook's implemenation of the Singlely linked list
 		new node;	
 			
 	} 
