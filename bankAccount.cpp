@@ -2,9 +2,7 @@
 // Created by Patrick on 4/4/2021.
 //
 #include "bankAccount.h"
-
 #include <iostream>
-#include <iomanip>
 #include <string>
 
 using namespace std;
@@ -49,6 +47,7 @@ void bankAccount::withdraw(double draw)
 
     balance = balance - draw;
 }
+
 
 void bankAccount::print()
 {

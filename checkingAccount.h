@@ -16,15 +16,13 @@ class checkingAccount: public bankAccount {
 
     void setMinBalance(double);
     double getMinBalance();
-
     void setInterest(double);
     double getInterest();
-
     void setService(double);
     double getService();
-
     void print();
-
+    void withdraw(double);
+    void balCheck(double, double);
     checkingAccount(double, double, double, string, int, double);
 
 
