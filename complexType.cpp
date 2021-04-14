@@ -82,3 +82,28 @@ double complexType::operator!() const
 
     return temp;
 }
+
+ostream& operator<<(ostream& osObject, const complexType& cObject)
+{
+    char sign;
+    // checks for sign of imaginary portion
+    // assigns correct sign for display in cout statement
+    if (cObject.imaginaryPart < 0)
+    {
+        sign = '-';
+    }
+    else
+    {
+        sign = '+';
+    }
+
+    osObject << cObject.realPart << sign << cObject.imaginaryPart << "i" << endl;
+    return osObject;
+}
+
+istream& operator>>(istream& isObject, complexType& cObject)
+{
+
+    isObject >> cObject.realPart >> cObject.imaginaryPart;
+    return isObject;
+}
