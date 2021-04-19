@@ -1,3 +1,6 @@
+// Student: Patrick Nelson
+// Assignment #: 5
+// Due: 4/20/21
 //
 // Created by Patrick on 4/14/2021.
 // experimenting with a while / switch structure to loop through a menu.

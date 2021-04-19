@@ -1,5 +1,6 @@
-//
-// Created by Patrick on 4/13/2021.
+// Student: Patrick Nelson
+// Assignment #: 5
+// Due: 4/20/21
 //
 
 #ifndef ASSIGNMENT5_COMPLEXTYPE_H
@@ -34,6 +35,9 @@ public:
     complexType operator+
             (const complexType& otherComplex) const;
     //Overload the operator +
+
+    complexType operator-
+            (const complexType& otherComplex) const;
 
     complexType operator*
             (const complexType& otherComplex) const;

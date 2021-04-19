@@ -1,5 +1,11 @@
+// Student: Patrick Nelson
+// Assignment #: 5
+// Due: 4/20/21
+//
 //
 // Created by Patrick on 4/13/2021.
+// Everything seems to work fairly well
+// Occasionally glitches out on second run through switch menu
 //
 
 #include "complexType.h"
@@ -19,7 +25,7 @@ void complexType::getComplex() const
     // assigns correct sign for display in cout statement
     if (imaginaryPart < 0)
     {
-        sign = '-';
+        sign = ' ';
     }
     else
     {
@@ -44,6 +50,16 @@ complexType complexType::operator+
     return tempComplex;
 }
 
+complexType complexType::operator-
+        (const complexType& otherComplex) const
+{
+    complexType tempComp;
+    tempComp.realPart = realPart - otherComplex.realPart;
+    tempComp.imaginaryPart = imaginaryPart - otherComplex.imaginaryPart;
+
+    return tempComp;
+}
+
 complexType complexType::operator*
         (const complexType& otherComplex) const
 {
@@ -63,8 +79,11 @@ bool complexType::operator==
         return true;
     }
     else
+    {
         cout << "False" << endl;
         return false;
+    }
+
 }
 
 complexType complexType::operator~() const
@@ -90,7 +109,7 @@ ostream& operator<<(ostream& osObject, const complexType& cObject)
     // assigns correct sign for display in cout statement
     if (cObject.imaginaryPart < 0)
     {
-        sign = '-';
+        sign = ' ';
     }
     else
     {
@@ -103,7 +122,6 @@ ostream& operator<<(ostream& osObject, const complexType& cObject)
 
 istream& operator>>(istream& isObject, complexType& cObject)
 {
-
     isObject >> cObject.realPart >> cObject.imaginaryPart;
     return isObject;
 }
