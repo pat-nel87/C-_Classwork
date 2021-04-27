@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int count(int num);
+
 int sumSquares(int num, int sum);
 
 int main() {
