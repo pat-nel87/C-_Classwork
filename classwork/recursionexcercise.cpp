@@ -22,7 +22,8 @@ int starRec(int num, int storage)
         return invert(num, storage);
     }
     int temp = num;
-    while(temp != 0){
+    while(temp != 0)
+    {
         cout << "*";
         temp--;
     }
@@ -35,7 +36,8 @@ int starRec(int num, int storage)
 int invert(int num2, int start)
 {
    // cout << num2 << "" << start << endl;
-    if (num2 == start){
+    if (num2 == start)
+    {
         return num2;
     }
 
