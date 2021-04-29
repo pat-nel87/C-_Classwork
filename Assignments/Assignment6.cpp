@@ -30,6 +30,6 @@ int sumSquares(int num, int sum)
         sum = (num * num) + sum;
         num--;
         cout << " Num is now: " << num << endl;
-        sumSquares(num,  sum);
+        return sumSquares(num,  sum);
 
 }
